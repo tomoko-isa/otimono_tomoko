@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>色合わせ落ちものゲーム</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<!-- ゲーム画面のHTMLを定義 --- (*1) -->
+<body>
+    <h1>色合わせ 落ちものゲーム</h1>
+    <div class="panel">
+        <div>
+            <canvas id="game-canvas" width="360" height="450"></canvas>
+            <div class="button-controls">
+                <button id="btn-left">←</button>
+                <button id="btn-rotate">回転</button>
+                <button id="btn-right">→</button>
+            </div>
+        </div>
+        <div class="scoreboard">
+            <div>スコア: <span id="score">0</span></div>
+            <div>消去数: <span id="cleared">0</span></div>
+        </div>
+    </div>
+    <div id="message"></div>
+</body>
+<!-- PyScriptとプログラムを読み込み --- (*2) -->
+<script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
+<script type="mpy" src="utils.py"></script>
+<script type="mpy" src="otimono_utils.py"></script>
+<script type="mpy" src="draw.py"></script>
+<script type="mpy" src="main.py"></script>
+<script type="mpy" src="ui.py"></script>
+</html>
